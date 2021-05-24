@@ -1,0 +1,31 @@
+<h5>Categories List</h5>
+
+<table class="table table-bordered" style="width: 60%">
+  <thead></thead>
+  <tbody>
+    <tr *ngFor="let category of categoriesTab">
+      <td><app-categorie-item [value]="category"></app-categorie-item></td>
+      <td>
+        <span class="text-primary" (click)="remove(category.id)">Delete</span>
+      </td>
+      <td>
+        <span class="text-primary" (click)="goToDetails(category.id)"
+          >Details</span
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
+<section>
+  <table>
+    <tr>
+      <td><label for="">Add new category</label></td>
+      <td><input type="text" [(ngModel)]="newCategory" /></td>
+      <td><input type="submit" value="Add" (click)="addCategory()" /></td>
+    </tr>
+  </table>
+</section>
+<br />
+<button class="bg-primary" (click)="goToFormations()">Gerer Formations</button>
+
+<h3>selected Id: {{ selectedId }}</h3>

@@ -1,0 +1,28 @@
+<h4>Selected Id: {{ categoryId }}</h4>
+
+<div *ngIf="categorie.id != 0">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th colspan="2">action</th>
+    </tr>
+    <tr>
+      <td>{{ categorie.id }}</td>
+      <td>
+        {{ categorie.name }}
+      </td>
+      <td>
+        <a [routerLink]="['update']" [state]="categorie"><span>Update</span></a>
+      </td>
+      <td>
+        <a routerLink="overview"> <span>Overview</span> </a>
+      </td>
+    </tr>
+  </table>
+</div>
+<router-outlet></router-outlet>
+<button class="text-primary" (click)="goToPrevious()">Previous</button>
+
+<button class="text-primary" (click)="goToNext()">Next</button>
+<button class="text-primary" (click)="goBack()">Back</button>

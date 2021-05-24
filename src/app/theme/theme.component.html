@@ -1,0 +1,27 @@
+<header>
+    <h4>Change Style</h4>
+    <select name="style" id="style" [(ngModel)]='selectedOption' (change)="applyStyle()">
+ <option value="">__</option>
+ <option value="dark">Dark</option>
+ <option value="light">Light</option>
+ <option value="pinky">Pinky</option>
+    </select>
+</header>
+<main [ngClass]='{dark: isDark, light: isLight, pinky: isPinky}'>
+    <section>
+        <h5 ><span appMydir [color]="'yellow'">Titre3</span></h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, repudiandae eos. Quas obcaecati quaerat pariatur delectus adipisci voluptatem incidunt! Laborum deleniti vel, fuga assumenda blanditiis accusantium quae ipsum nostrum quis.</p>
+    </section>
+    <section>
+        <h5 ><span appMydir [color] = "'red'">Titre3</span></h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, repudiandae eos. Quas obcaecati quaerat pariatur delectus adipisci voluptatem incidunt! Laborum deleniti vel, fuga assumenda blanditiis accusantium quae ipsum nostrum quis.</p>
+    </section>
+    <section>
+        <h5 ><span appMydir>Titre3</span></h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, repudiandae eos. Quas obcaecati quaerat pariatur delectus adipisci voluptatem incidunt! Laborum deleniti vel, fuga assumenda blanditiis accusantium quae ipsum nostrum quis.</p>
+    </section>
+    <section>
+        <h5 ><span appMydir>Titre3</span></h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, repudiandae eos. Quas obcaecati quaerat pariatur delectus adipisci voluptatem incidunt! Laborum deleniti vel, fuga assumenda blanditiis accusantium quae ipsum nostrum quis.</p>
+    </section>
+</main>
